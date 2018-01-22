@@ -90,8 +90,7 @@ button:hover {
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Find A Price</a>
   <a href="#regForm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Report a Price</a>
-  <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">How it Works</a>
-  
+  <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">How it Works</a> 
   </div>
  </div>
 
@@ -102,19 +101,16 @@ button:hover {
     <a href="#pricing" class="w3-bar-item w3-button">Become a RAP Business</a>
   </div>
 </div>
-
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  
-  <!-- ++++++++++++++SEARCH BAR+++++++++++++++++++ -->
-  <form method="get" action="/cgi-bin/searchBar.py" class="form-wrapper">
-  <input type="text" name="search" id=search placeholder="Find Prices for Services in Your Area..." />
-  <input type="submit" value="GO" id=submit />
+<!-- Search Bar -->
+<div class="w3-container">
+<div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card ">
+<div class="w3-display-container w3-padding-64">
+  <form method="get" action="/cgi-bin/searchBar.py" class="">
+    <input type="text" placeholder="Find reported prices in your area..">
   </form>
-  
 </div>
-
-
+</div>
+</div>
 <!-- Category Container -->
 <div class="w3-container w3-padding-64 w3-center" id="">
 <h2>Popular Categories</h2>
@@ -141,7 +137,7 @@ button:hover {
 </div>
 
 <div class="w3-quarter">
-  <img src="beauty.png" alt="" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="beauty.png" alt="Beauty" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Self Maintenance</h3>
   <p></p>
 </div>
@@ -199,9 +195,9 @@ button:hover {
 	<p><input placeholder="Company Address" oninput="this.className = ''" name="pricePaid"></p> 	
   </div>
   <div style="overflow:auto;">
-    <div style="text-align:center;margin-top:40px;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    <div style="text-align:center;margin-top:40px;" >
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)" class="w3-teal">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)" class="w3-teal">Next</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
@@ -215,7 +211,7 @@ button:hover {
 </div>
 
 <!-- About Row -->
-<div class="w3-container w3-padding-64 w3-center" id="about">
+<div class="w3-container w3-padding-64 w3-center w3-teal" id="about">
 	<h2>How it Works:</h2>
 	<p>1. Search for any service imaginable.</p>
 	<p>2. Get instant price comparisons from verified buyers and businesses.</p>
