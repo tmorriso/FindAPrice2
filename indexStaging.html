@@ -8,13 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  background-color: #f1f1f1;
-}
 
 #regForm {
   background-color: #ffffff;
@@ -95,7 +89,7 @@ button:hover {
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Find A Price</a>
-  <a href="#RAPform" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Report a Price</a>
+  <a href="#regForm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Report a Price</a>
   <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">How it Works</a>
   
   </div>
@@ -103,7 +97,7 @@ button:hover {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#RAPform" class="w3-bar-item w3-button">Report a Price</a>
+    <a href="#regForm" class="w3-bar-item w3-button">Report a Price</a>
     <a href="#about" class="w3-bar-item w3-button">How it Works</a>
     <a href="#pricing" class="w3-bar-item w3-button">Become a RAP Business</a>
   </div>
@@ -114,7 +108,7 @@ button:hover {
   
   <!-- ++++++++++++++SEARCH BAR+++++++++++++++++++ -->
   <form method="get" action="/cgi-bin/searchBar.py" class="form-wrapper">
-  <input type="text" name="search" id=search placeholder="Search Local Prices..." />
+  <input type="text" name="search" id=search placeholder="Find Prices for Services in Your Area..." />
   <input type="submit" value="GO" id=submit />
   </form>
   
@@ -122,7 +116,7 @@ button:hover {
 
 
 <!-- Category Container -->
-<div class="w3-container w3-padding-64 w3-center" id="team">
+<div class="w3-container w3-padding-64 w3-center" id="">
 <h2>Popular Categories</h2>
 <p>Search local services for instant price estimates</p>
 
@@ -155,32 +149,54 @@ button:hover {
 </div>
 </div>
 
+
 <!-- RAP Form -->
+<div class="w3-container w3-padding-64 w3-center" id="">
 <form id="regForm" action="">
-  <h1>Choose a Category:</h1>
+  <h2>Report a Price</h2>
   <!-- One "tab" for each step in the form: -->
-  <div class="tab" style="text-align:center;margin-top:40px;">
-    <select name="cars">
+  <div class="tab" style="text-align:center;margin-top:40px;">Category<br>
+    <select name="category">
     <option value="house">Home Improvements</option>
-    <option value="saab">Auto Repairs</option>
-    <option value="fiat">Self Care</option>
-    <option value="audi">Other</option>
+    <option value="auto">Auto Repairs</option>
+    <option value="self">Self Care</option>
+    <option value="other">Other</option>
     </select>
   </div>
   <br><br><br>
-  
-  <div class="tab">Contact Info:
-    <p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
-    <p><input placeholder="Phone..." oninput="this.className = ''" name="phone"></p>
+  <div class="tab" style="text-align:center;">Subcategory<br>
+    <select name="category">
+    <option value="paint">Painting</option>
+    <option value="windows">Windows</option>
+    <option value="roof">Roof</option>
+    <option value="plumbing">Plumbing</option>
+	<option value="electric">Electric</option>
+    <option value="landscaping">Landscaping</option>
+    <option value="bathroom">Bathroom Remodel</option>
+    <option value="kitchen">Kitchen Remodel</option>
+	<option value="generalContractor">General Contracting</option>
+    </select>
+	<br><br><br>
+  </div>
+  <div class="tab" style="text-align:center;">Painting Specifics<br>
+    <select name="category">
+    <option value="paintExterior">Home Exterior</option>
+    <option value="paintInterior">Home Interior</option>
+    </select>
+	<br><br><br>
+  </div>
+  <div class="tab">Painting Specifics:
+    <p><input placeholder="Square Feet to Paint"></p>
+	<p>Or Estimate Below</p>
+    <p><input placeholder="Number of Beds"></p>
+    <p><input placeholder="Number of Baths"></p>
   </div>
   <div class="tab">Price Paid:
-    <p><input placeholder="$" oninput="this.className = ''" name="dd"></p>
-    <p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+    <p><input placeholder="$" oninput="this.className = ''" name="pricePaid"></p>  
   </div>
-  <div class="tab">Login Info:
-    <p><input placeholder="Username..." oninput="this.className = ''" name="uname"></p>
-    <p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+  <div class="tab">Service Provider Information:
+    <p><input placeholder="Company Name" oninput="this.className = ''" name="pricePaid"></p>
+	<p><input placeholder="Company Address" oninput="this.className = ''" name="pricePaid"></p> 	
   </div>
   <div style="overflow:auto;">
     <div style="text-align:center;margin-top:40px;">
@@ -196,6 +212,7 @@ button:hover {
     <span class="step"></span>
   </div>
 </form>
+</div>
 
 <!-- About Row -->
 <div class="w3-container w3-padding-64 w3-center" id="about">
