@@ -3,8 +3,10 @@
 <title>reportaprice.com</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
@@ -101,39 +103,43 @@ button:hover {
     <a href="#pricing" class="w3-bar-item w3-button">Become a RAP Business</a>
   </div>
 </div>
+<!-- About Row -->
+<div class="w3-container w3-padding-64 w3-center w3-teal" id="about">
+	<h2>How it Works:</h2>
+	<p>1. Search for any service imaginable.</p>
+	<p>2. Get instant price comparisons from verified buyers and businesses.</p>
+	<p>3. Start your search as an educated consumer!</p>
+</div>
 <!-- Search Bar -->
 <div class="w3-container">
-<div class="w3-panel w3-padding-16 w3-black w3-opacity w3-card ">
-<div class="w3-display-container w3-padding-64">
+<div class="w3-panel w3-padding-64">
+  <br><br>
   <form method="get" action="/cgi-bin/searchBar.py" class="">
-    <input type="text" placeholder="Find reported prices in your area..">
+    <input type="text" placeholder="Search local services for instant price estimates...">
   </form>
 </div>
 </div>
-</div>
+
 <!-- Category Container -->
 <div class="w3-container w3-padding-64 w3-center" id="">
 <h2>Popular Categories</h2>
-<p>Search local services for instant price estimates</p>
+
 
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
   <img src="house.png" alt="house" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Around the House</h3>
-  <p></p>
 </div>
 
 <div class="w3-quarter">
   <img src="auto.png" alt="Auto" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Auto Maintenance</h3>
-  <p></p>
 </div>
 
 <div class="w3-quarter">
   <img src="errands.png" alt="Errands" style="width:45%" class="w3-circle w3-hover-opacity">
   <h3>Errands</h3>
-  <p></p>
 </div>
 
 <div class="w3-quarter">
@@ -141,26 +147,54 @@ button:hover {
   <h3>Self Maintenance</h3>
   <p></p>
 </div>
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="house.png" alt="house" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Programming and Tech</h3>
+</div>
+
+<div class="w3-quarter">
+  <img src="auto.png" alt="Auto" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Financial Services</h3>
+</div>
+
+<div class="w3-quarter">
+  <img src="errands.png" alt="Errands" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Marketing</h3>
+</div>
+
+<div class="w3-quarter">
+  <img src="beauty.png" alt="Business" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Business Development</h3>
+</div>
 
 </div>
 </div>
-
+<!-- About Row -->
+<br><br><br><br><br><br>
+<div class="w3-container w3-padding-32 w3-center w3-teal" id="about">
+	<h2>Help us to grow our database of prices</h2>
+	<p>1. Paid for or got a quote for a service?</p>
+	<p>2. Report the price here!</p>
+	<p>3. Earn points towards future service discounts.</p>
+</div>
 
 <!-- RAP Form -->
-<div class="w3-container w3-padding-64 w3-center" id="">
+<div class="w3-container w3-padding-16 w3-center" id="">
 <form id="regForm" action="">
   <h2>Report a Price</h2>
   <!-- One "tab" for each step in the form: -->
   <div class="tab" style="text-align:center;margin-top:40px;">Category<br>
-    <select name="category">
+    <select name="category" id="category">
     <option value="house">Home Improvements</option>
     <option value="auto">Auto Repairs</option>
     <option value="self">Self Care</option>
     <option value="other">Other</option>
     </select>
   </div>
-  <br><br><br>
-  <div class="tab" style="text-align:center;">Subcategory<br>
+ 
+  <div class="tab" style="text-align:center;margin-top:40px;">Subcategory<br>
     <select name="category">
     <option value="paint">Painting</option>
     <option value="windows">Windows</option>
@@ -174,7 +208,7 @@ button:hover {
     </select>
 	<br><br><br>
   </div>
-  <div class="tab" style="text-align:center;">Painting Specifics<br>
+  <div class="tab" style="text-align:center;margin-top:40px;">Painting Specifics<br>
     <select name="category">
     <option value="paintExterior">Home Exterior</option>
     <option value="paintInterior">Home Interior</option>
@@ -209,15 +243,56 @@ button:hover {
   </div>
 </form>
 </div>
-
-<!-- About Row -->
-<div class="w3-container w3-padding-64 w3-center w3-teal" id="about">
-	<h2>How it Works:</h2>
-	<p>1. Search for any service imaginable.</p>
-	<p>2. Get instant price comparisons from verified buyers and businesses.</p>
-	<p>3. Start your search as an educated consumer!</p>
+<p id="demo"></p>
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Leave us feedback, suggest new services, or just chat!</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Boise, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 9702160256</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  morrison.thomas@hotmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
 </div>
 
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
 
 
 
@@ -263,6 +338,10 @@ function nextPrev(n) {
   if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
   x[currentTab].style.display = "none";
+  // Get the index of the selected option
+  var categoryIndex = document.getElementById("category").selectedIndex;
+  // Print index for testing
+  document.getElementById("demo").innerHTML = categoryIndex;
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
   // if you have reached the end of the form...
